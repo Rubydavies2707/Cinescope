@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineScope</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div id="logo">CineScope 🎬</div>
+    <div id="nav-buttons">
+      <button id="toggle-dark">Dark Mode 🌙</button>
+      <button id="view-watchlist">⭐ Watchlist</button>
+    </div>
+  </nav>
+
+  <!-- SEARCH + OPTIONS -->
+  <section id="control-panel">
+
+    <div id="search-bar">
+      <input type="text" id="search" placeholder="Search for a movie...">
+      <div id="autocomplete"></div>
+      <button id="search-btn">Search</button>
+    </div>
+
+    <div id="filters">
+      <select id="sort-options">
+        <option value="none">Sort Results</option>
+        <option value="title-asc">Title A–Z</option>
+        <option value="title-desc">Title Z–A</option>
+        <option value="year-asc">Year ↑</option>
+        <option value="year-desc">Year ↓</option>
+      </select>
+
+      <button id="clear-cache">Clear Cache</button>
+    </div>
+
+  </section>
+
+  <!-- SPINNER -->
+  <div id="spinner" class="hidden"></div>
+
+  <!-- RECENTLY VIEWED -->
+  <section id="recently-viewed"></section>
+
+  <!-- SEARCH RESULTS -->
+  <div id="results"></div>
+
+  <!-- MODAL -->
+  <div id="modal">
+    <div id="modal-content">
+      <span id="close-modal">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="omdb.js"></script>
+</body>
+</html>
